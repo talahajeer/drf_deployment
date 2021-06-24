@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn snack_permissions_project.wsgl:application --bind 0:0:0:0:8002 --workers 4
+    volumes:
+      - .:/code
+    ports:
+      - "8002:8002"
+    depends_on: 
+      - db
+  db:
+    image: postgres:11
+    environment: 
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'

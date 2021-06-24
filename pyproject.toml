@@ -1,13 +1,22 @@
 [tool.poetry]
-name = "drf_deployment"
+name = "dr-auth"
 version = "0.1.0"
 description = ""
 authors = ["talahajeer <tala.hajeer@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+Django = "^3.2.4"
+djangorestframework = "^3.12.4"
+flake8 = "^3.9.2"
+gunicorn = "^20.1.0"
+whitenoise = "^5.2.0"
+djangorestframework-simplejwt = "^4.7.1"
+django-cors = "^0.1"
+django-cors-headers = "^3.7.0"
 
 [tool.poetry.dev-dependencies]
+black = "^21.6b0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
